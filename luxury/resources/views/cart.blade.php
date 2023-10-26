@@ -11,7 +11,7 @@
 <div class="content">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 {{-- Cart detail --}}
                 <table class="table">
                     <thead>
@@ -27,13 +27,21 @@
                             <th>
                                 <button class="remove">x</button>
                                 <img src="{{ URL('image/nhan-kim-cuong-nam-18k-vnm2022072751-768x768.jpg') }}" alt="image san pham" class="cart-img">
-                                <a href="#">ten sp</a>
+                                <a href="#" class="text-decoration-none">ten sp</a>
                             </th>
-                            <th style="line-height: 96px;">gia</th>
-                            <th style="line-height: 96px;">so luong</th>
-                            <th style="line-height: 96px;">tam tinh</th>
+                            <th style="line-height: 96px;">49.617.000 ₫</th>
+                            <th style="line-height: 96px;">
+                                <div class="quality d-flex">
+                                    <div class="wrapper">
+                                        <span class="minus">-</span>
+                                        <span class="num">1</span>
+                                        <span class="plus">+</span>
+                                    </div>
+                                </div>
+                            </th>
+                            <th style="line-height: 96px;">49.617.000 ₫</th>
                         </tr>
-                        <tr>
+                        <tr class="border-bottom-0 border-white">
                             <th>
                                 <button>← TIẾP TỤC XEM SẢN PHẨM</button>
                                 <button>CẬP NHẬT GIỎ HÀNG</button>
@@ -42,7 +50,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
 
             </div>
         </div>

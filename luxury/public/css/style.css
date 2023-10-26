@@ -14,3 +14,23 @@
     width: 100px;
     height: 100px;
 }
+
+.wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+.wrapper span{
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.wrapper span.num{
+  border-right: 2px solid rgba(0,0,0,0.2);
+  border-left: 2px solid rgba(0,0,0,0.2);
+  pointer-events: none;
+}
