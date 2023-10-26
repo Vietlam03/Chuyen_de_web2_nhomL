@@ -1,0 +1,16 @@
+/* cart.blade.php */
+.remove {
+    width: 24px;
+    font-size: 12px;
+    line-height: 19px;
+    border-radius: 100%;
+    color: #ccc;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid currentColor;
+}
+
+.cart-img {
+    width: 100px;
+    height: 100px;
+}
