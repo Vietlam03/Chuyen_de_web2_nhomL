@@ -1,0 +1,125 @@
+/* css displayUser */
+*{
+    font-family: Times New Roman;
+}
+
+/* CSS Header */
+header{
+    height: 64.66px;
+    background: #D9D9D9;
+    
+}
+
+header img{
+    filter: brightness(120%);
+
+}
+
+/* CSS main */
+.main {
+    padding-top: 30px;
+} 
+/* css line logo */
+.titleLogo a::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: black;
+    top: 590%;
+    left: -23%;
+}
+.titleLogo a::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: black;
+    left: 117%;
+    top: 590%;
+}
+
+.titleLogo a {
+    text-decoration: none;
+    position: relative;
+}
+.titleLogo {
+    width: 210px;
+    padding-left: 30px;
+    padding-bottom: 7px;
+    border-bottom: solid 1px black;
+}
+
+/* css line title */
+.title a::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: black;
+    top: 154%;
+    right: 135%;
+}
+.title a::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: black;
+    left: 970%;
+    top: 154%;
+}
+
+.title a {
+    text-decoration: none;
+    position: relative;
+    padding-left: 10px;
+}
+.title {
+    width: 830px;
+    width: auto;
+    padding-left: 30px;
+    padding-bottom: 7px;
+    border-bottom: solid 1px black;
+}
+
+@media only screen and (max-width: 800px) {
+    .title a::after {
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 0px;
+     
+        background:black;
+        top: 135%;
+        right: 140%;
+    }
+    .title a::before {
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 5px;
+     
+        background: black;
+        left: 300%;
+        top: 130%;
+    }
+    
+    .title a {
+        text-decoration: none;
+        position: relative;
+    }
+    .title {
+        width: 830px;
+        width: auto;
+        padding-left: 30px;
+        padding-bottom: 7px;
+        border-bottom: solid 1px black;
+    }
+    
+  }
+   
