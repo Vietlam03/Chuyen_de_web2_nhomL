@@ -7,6 +7,7 @@
         <div class="row">
             {{-- Cart detail --}}
             <div class="col-md-7 border border-2 border-start-0 border-top-0 border-bottom-0">
+                <div class="loader d-none">Loadding...</div>
                 <table class="table">
                     <thead>
                         <tr>
@@ -23,7 +24,9 @@
                                 <img src="{{ URL('image/nhan-kim-cuong-nam-18k-vnm2022072751-768x768.jpg') }}" alt="image san pham" class="cart-img">
                                 <a href="#" class="text-decoration-none cart-detail-name">ten sp</a>
                             </th>
-                            <th style="line-height: 96px;">49.617.000 ₫</th>
+                            <th style="line-height: 96px;">
+                                <span class="price">49.617.000</span> ₫
+                            </th>
                             <th>
                                 <div class="quality">
                                     <div class="wrapper">
@@ -33,7 +36,7 @@
                                     </div>
                                 </div>
                             </th>
-                            <th style="line-height: 96px;">49.617.000 ₫</th>
+                            <th class="sub-total" style="line-height: 96px;">49.617.000 ₫</th>
                         </tr>
                         <tr class="border-bottom-0 border-white">
                             <th>
@@ -46,13 +49,14 @@
             </div>
             {{-- Payment --}}
             <div class="col-md-5">
+                <div class="loader d-none">Loadding...</div>
                 <div class="border border-2 payment-title">
                     Cộng giỏ hàng
                 </div>
                 <table class="table">
                     <tr>
                         <td>Tạm tính</td>
-                        <th class="text-end">49.617.000 ₫</th>
+                        <th class="text-end sub-total">49.617.000 ₫</th>
                     </tr>
                     <tr>
                         <td>Giao hàng</td>
@@ -63,7 +67,9 @@
                     </tr>
                     <tr class="border-3 border-start-0 border-end-0 border-top-0">
                         <td>Tổng</td>
-                        <th class="text-end">49.617.000 ₫</th>
+                        <th class="text-end">
+                            <span class="sub-total">49.617.000</span> ₫
+                        </th>
                     </tr>
                     <tr class="border-3 border-start-0 border-end-0 border-top-0">
                         <td colspan="2">
@@ -82,3 +88,4 @@
     </div>
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/ajax.js') }}"></script>
