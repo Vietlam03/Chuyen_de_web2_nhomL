@@ -18,3 +18,17 @@ minus.addEventListener("click", () => {
     num.innerText = a;
   }
 });
+
+// Cập nhật giỏ hàng
+const price = document.querySelector('.price').textContent;
+const subTotal = document.querySelectorAll('.sub-total');
+const btnUpdate = document.querySelector('.btn-update');
+// const number = document.querySelector('.num').textContent;
+
+btnUpdate.addEventListener('click', function () {
+  const total = price * a;
+  // subTotal.forEach(element => {
+  //     element
+  // });
+  alert(total);
+});

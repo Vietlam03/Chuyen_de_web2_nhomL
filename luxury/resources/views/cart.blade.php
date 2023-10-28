@@ -56,7 +56,9 @@
                 <table class="table">
                     <tr>
                         <td>Tạm tính</td>
-                        <th class="text-end sub-total">49.617.000 ₫</th>
+                        <th class="text-end">
+                            <span class="sub-total">49.617.000</span> ₫
+                        </th>
                     </tr>
                     <tr>
                         <td>Giao hàng</td>
@@ -88,4 +90,6 @@
     </div>
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('js/ajax.js') }}"></script>
+{{-- <script src="{{ asset('js/ajax.js') }}"></script> --}}
+
+@extends('header')
