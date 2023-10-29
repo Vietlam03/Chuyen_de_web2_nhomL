@@ -36,10 +36,44 @@
                 <div class="col-3">
                     <div class="titleLogo"><a href="">
                             <img src="images/Logo.png" alt="" style="width: 150px; height: 170px;">
-                        </a></div>
+                    </a></div>
+
+                    <div class="menuUser">
+                        <p><br></p>
+                        <p><a href=""> Thông tin tài khoản </a></p>
+                        <p><a href=""> Mã giảm giá </a></p >
+                        <p><a href=""> Lịch sử mua hàng </a></p>
+                        <p><img src="images/logout.png" alt=""><a href="" style="color:red"> Đăng xuất </a></p>
+                    </div>
                 </div>
                 <div class="col-9" style="padding-top: 50px;">
-                    <div class="title"><a href="">Trang Chủ </a> <span class="px-3"> > <span class="px-3"> Thông tin tài khoản</span></span></div>
+                    <div class="title"><a href="">Trang Chủ </a> <span class="px-3"> > <span class="px-3 fs-3"> Thông tin tài khoản</span></span></div>
+
+                    <div class="infoUser">
+                        <h3 class="pt-4"><img src="images/user.png" alt=""> <span class="ps-4"> Nguyễn Văn A <span style="padding-left:80px">Mã khách hàng: 123456789</span></span></h3>
+                        <div class="row ps-3 pt-4">
+                        <div class="col info">
+                            <label for="">Username</label>
+                            <p class="border border-dark rounded-pill"><i class="fa-solid fa-user fa-xl ps-3"></i> <span class="ps-3 pt-2">nguyenvana03 </span></p>
+                            <label for="">Họ tên</label>
+                            <p class="border border-dark rounded-pill"><i class="fa-solid fa-user fa-xl ps-3"></i> <span class="ps-3 pt-2">NGUYỄN VĂN A </span></p>
+                            <label for="">Số điện thoại</label>
+                            <p class="border border-dark rounded-pill"><i class="fa-solid fa-phone-volume fa-lg ps-3"></i> <span class="ps-3 pt-2">0919 191 919 </span></p>
+                            <label for="">Địa chỉ</label>
+                            <p class="border border-dark rounded-pill"><i class="fa-solid fa-location-dot fa-xl ps-3"></i> <span class="ps-3 pt-2">12/5 Đường Top , Thành phố Thủ Đức </span></p>
+                        </div>
+                        <div class="col info">
+                            <label for="">Password</label>
+                            <p class="border border-dark rounded-pill"><i class="fa-solid fa-key fa-xl ps-3"></i> <span class="ps-3 pt-2">*********** </span></p>
+                            <label for="">Email</label>
+                            <p class="border border-dark rounded-pill"><i class="fa-solid fa-envelope fa-xl ps-3"></i> <span class="ps-3 pt-2">nguyenvana303@gmail.com </span></p>
+                            <label for="">Ngày sinh</label>
+                            <p class="border border-dark rounded-pill"><i class="fa-solid fa-calendar fa-xl ps-3"></i> <span class="ps-3 pt-2">01/01/2003 </span></p>
+                            <label for="">Giới tính</label>
+                            <p class="border border-dark rounded-pill"><i class="fa-solid fa-mars-and-venus fa-xl ps-3"></i> <span class="ps-3 pt-2">Nam </span></p>
+                        </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
