@@ -24,7 +24,7 @@
                                 <img src="{{ URL('image/nhan-kim-cuong-nam-18k-vnm2022072751-768x768.jpg') }}" alt="image san pham" class="cart-img">
                                 <a href="#" class="text-decoration-none cart-detail-name">ten sp</a>
                             </th>
-                            <th style="line-height: 96px;">
+                            <th style="line-height: 96px; ">
                                 <span class="price">49.617.000</span> ₫
                             </th>
                             <th>
@@ -36,16 +36,16 @@
                                     </div>
                                 </div>
                             </th>
-                            <th class="sub-total" style="line-height: 96px;">49.617.000 ₫</th>
-                        </tr>
-                        <tr class="border-bottom-0 border-white">
-                            <th>
-                                <a class="btn btn-view">← TIẾP TỤC XEM SẢN PHẨM</a>
-                                <a class="btn btn-update">CẬP NHẬT GIỎ HÀNG</a>
+                            <th style="line-height: 96px; ">
+                                <span class="sub-total">49.617.000</span> ₫
                             </th>
                         </tr>
                     </tbody>
                 </table>
+                <div class="border-bottom-0 border-white">
+                    <a class="btn btn-view">← TIẾP TỤC XEM SẢN PHẨM</a>
+                    <a class="btn btn-update">CẬP NHẬT GIỎ HÀNG</a>
+                </div>
             </div>
             {{-- Payment --}}
             <div class="col-md-5">
@@ -91,5 +91,3 @@
 </div>
 <script src="{{ asset('js/app.js') }}"></script>
 {{-- <script src="{{ asset('js/ajax.js') }}"></script> --}}
-
-@extends('header')
