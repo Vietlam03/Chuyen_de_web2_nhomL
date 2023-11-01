@@ -56,3 +56,10 @@ btnUpdate.addEventListener('click', function () {
   });
 });
 
+// Xóa sản phẩm ra khỏi giỏ hàng
+const remove = document.querySelector('#remove-product-id');
+const product_id = document.querySelector('#product-id');
+
+remove.addEventListener('click', function () {
+  product_id.remove();
+})
