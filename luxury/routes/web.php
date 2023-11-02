@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+    // return env('DB_DATABASE');
+});
+Route::get('/cart', function () {
+    return view('cart');
 });
