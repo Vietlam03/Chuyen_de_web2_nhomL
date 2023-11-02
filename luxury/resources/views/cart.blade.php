@@ -83,7 +83,7 @@
                         </td>
                     </tr>
                 </table>
-                <input type="text" class="form-control border-3" placeholder="Mã ưu đãi">
+                <input type="text" class="form-control border-3" placeholder="Mã ưu đãi" maxlength="6">
                 <button type="submit" class="btn text-center btn-promotion">Áp dụng</button>
             </div>
         </div>
