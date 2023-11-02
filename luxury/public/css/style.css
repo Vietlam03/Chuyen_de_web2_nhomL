@@ -19,32 +19,8 @@ header img{
 .main {
     padding-top: 30px;
 } 
-/* css line logo */
-.titleLogo a::after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: black;
-    top: 590%;
-    left: -23%;
-}
-.titleLogo a::before {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: black;
-    left: 117%;
-    top: 590%;
-}
+/* css logo */
 
-.titleLogo a {
-    text-decoration: none;
-    position: relative;
-}
 .titleLogo {
     width: 210px;
     padding-left: 30px;
@@ -52,27 +28,7 @@ header img{
     border-bottom: solid 1px black;
 }
 
-/* css line title */
-.title a::after {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: black;
-    top: 145%;
-    right: 123%;
-}
-.title a::before {
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: black;
-    left:650%;
-    top: 145%;
-}
+/* css title */
 
 .title a {
     font-size: 25px;
@@ -109,38 +65,4 @@ header img{
 .main .infoUser .info p i{
     padding-top: 18px;
 }
-@media only screen and (max-width: 800px) {
-    .title a::after {
-        content: '';
-        position: absolute;
-        width: 0px;
-        height: 0px;
-     
-        background:black;
-        top: 135%;
-        right: 140%;
-    }
-    .title a::before {
-        content: '';
-        position: absolute;
-        width: 0px;
-        height: 5px;
-     
-        background: black;
-        left: 300%;
-        top: 130%;
-    }
-    
-    .title a {
-        text-decoration: none;
-        position: relative;
-    }
-    .title {
-        width: auto;
-        padding-left: 30px;
-        padding-bottom: 7px;
-        border-bottom: solid 1px black;
-    }
-    
-  }
-   
+/* css icon input */
