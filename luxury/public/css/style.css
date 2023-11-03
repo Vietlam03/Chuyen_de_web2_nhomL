@@ -57,14 +57,7 @@ header img{
     color: black;
 }
 
-/* css infoUser info */
-.main .infoUser .info p{
-    width: 350px;
-    height: 40px;
-}
-.main .infoUser .info p i{
-    padding-top: 18px;
-}
+
 /* css header */
 li{
     display: inline-block;
