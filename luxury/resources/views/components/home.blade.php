@@ -72,7 +72,7 @@
                         </li>
                         <li>
                             <a href="" style="margin-left: 130px">
-                                <i class="fa-solid fa-magnifying-glass fa-flip-horizontal"></i>
+                                <img src="images/search.png" style="cursor: pointer;width: 40px;">
 
                             </a>
                             <a class="search"
