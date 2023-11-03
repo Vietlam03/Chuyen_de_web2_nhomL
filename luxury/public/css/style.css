@@ -65,4 +65,9 @@ header img{
 .main .infoUser .info p i{
     padding-top: 18px;
 }
-/* css icon input */
+/* css header */
+li{
+    display: inline-block;
+    list-style: none;
+   
+}
