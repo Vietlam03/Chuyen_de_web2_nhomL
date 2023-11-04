@@ -83,3 +83,8 @@
 .content .btn-promotion:hover {
   background: #ccc;
 }
+ li{
+    display: inline-block;
+    list-style: none;
+    
+}
