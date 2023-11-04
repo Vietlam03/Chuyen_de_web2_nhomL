@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
+use App\Models\Category;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,13 +18,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('wellcome');
+    return view('home');
     // return env('DB_DATABASE');
 });
-Route::get('/next', function () {
-    // return view('welcome');
-    return redirect('/');
-});
-Route::get('/cart', function () {
-    return view('cart');
-});
+// Route::get('/next', function () {
+//     // return view('welcome');
+//     return redirect('/');
+// });
+// Route::get('/cart', function () {
+//     return view('cart');
+// });
+
+// Route::get('products', function () {
+//    return view('products/index'); 
+// });
+
+Route::resource('products', ProductController::class);
