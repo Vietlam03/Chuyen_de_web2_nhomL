@@ -12,7 +12,7 @@
 <body>
 <x-home>
     <div class="content">
-        @include('cart')
+        
     </div>
 </x-home>
 </body>

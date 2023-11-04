@@ -1,6 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Product;
+// use App\Models\Category;
+// use App\Models\Comment;
+use App\Models\OrderDetail;
+use App\Http\Controllers\ProductController;
+// use App\Http\Controllers\CategoryController;
+// use App\Http\Controllers\CommentController;
+use App\Http\Controllers\OrderDetailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +25,12 @@ Route::get('/', function () {
     return view('welcome');
     // return env('DB_DATABASE');
 });
-Route::get('/cart', function () {
-    return view('cart');
-});
+// Route::get('/cart', function () {
+//     return view('cart');
+// });
 Route::get('/trangchu', function () {
     return view('trangchu');
 });
+
+Route::resource('products', ProductController::class);
+Route::resource('cart', OrderDetailController::class);

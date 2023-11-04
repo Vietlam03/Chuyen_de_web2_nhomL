@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Product;
+use App\Models\OrderDetail;
 
-class ProductController extends Controller
+class OrderDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::all();
-        return view('products.index', ['products' => $products]);
+        $orderDetails = OrderDetail::all();
+        return view('cart.index', ['orderDetails' => $orderDetails]);
     }
 
     /**
@@ -47,9 +47,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return view('products.show', [
-            'products' => Product::findOrFail($id)
-        ]);
+        //
     }
 
     /**

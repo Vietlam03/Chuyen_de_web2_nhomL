@@ -11,8 +11,12 @@ class Product extends Model
     
     protected $fillable=['name','image','price','description','material','size'];
 
-    public function categories()
+    // public function categories()
+    // {
+    //     return $this->belongsToMany(Category::class);
+    // }
+    public function order_details()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(OrderDetail::class);
     }
 }
