@@ -12,7 +12,7 @@
 <body>
 <x-home>
     <div class="content">
-        nooouij cdudsh
+        @include('cart')
     </div>
 </x-home>
 </body>
