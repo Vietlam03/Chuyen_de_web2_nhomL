@@ -1,3 +1,12 @@
+<?php
+
+use App\Models\Customer;
+
+    $customers = Customer::all();
+    $count = $customers->count();
+    $customer = Customer::find(1);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +23,7 @@
 </head>
 
 <body>
-  <x-homeUser>
+  <x-homeCustomer>
         <div class="main">
             <div class="container">
                 <div class="row">
@@ -37,12 +46,13 @@
                     <div class="col-9" style="padding-top: 50px;">
                         <div class="title"><a href="">Trang Chủ </a> <span class="px-3"> > <span class="px-3 fs-3"> Thông tin tài khoản</span></span></div>
                         <!-- infoUser basic -->
+                       
                         <div class="infoUser row">
                             <div class="col">
-                                <h3 class="pt-4"><img src="images/user.png" alt=""> <span class="ps-4"> Nguyễn Văn A </h3></span>
+                                <h3 class="pt-4"><img src="images/user.png" alt=""> <span class="ps-4"> <?php echo $customer['name']?> </h3></span>
                             </div>
                             <div class="col">
-                                <h3 style="padding-left:80px; padding-top:50px;margin-left:-55px">Mã khách hàng: 123456789</h3>
+                                <h3 style="padding-left:80px; padding-top:50px;margin-left:-55px">Mã khách hàng: <?php echo $customer['id']?></h3>
                             </div>
 
                             <!-- form info detail -->
@@ -50,25 +60,25 @@
                                 <div class="row ps-3 pt-4">
                                     <div class="col info">
                                         <label for="username">Username</label> <br>
-                                        <input type="text" name="username" size="30" maxlength="50" required style="background-image: url(/images/user.png);  background-size:35px 25px;background-position: left center 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="nguyenvana03"> <br> <br>
+                                        <input type="text" name="username" size="30" maxlength="50" required style="background-image: url(/images/user.png);  background-size:35px 25px;background-position: left center 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="<?php echo $customer['username']?>"> <br> <br>
                                         <label for="fullname">Họ tên</label> <br>
 
-                                        <input type="fullname" name="fullname" size="30" maxlength="50" required style="background-image: url(/images/user.png);  background-size:35px 25px;background-position: left center 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="NGUYỄN VĂN A"><br> <br>
+                                        <input type="fullname" name="fullname" size="30" maxlength="50" required style="background-image: url(/images/user.png);  background-size:35px 25px;background-position: left center 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="<?php echo $customer['name']?>"><br> <br>
                                         <label for="phone">Số điện thoại</label> <br>
-                                        <input type="tel" name="phone" size="30" pattern="\d{10}" required style="background-image: url(/images/phone.png); background-size:45px 25px; background-position: left center 3px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="0919191919"> <br> <br>
+                                        <input type="tel" name="phone" size="30" pattern="\d{10}" required style="background-image: url(/images/phone.png); background-size:45px 25px; background-position: left center 3px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="<?php echo $customer['tel']?>"> <br> <br>
                                         <label for="address">Địa chỉ</label> <br>
-                                        <input type="text" name="address" size="30" style="background-image: url(/images/address.png); background-size:35px 20px; background-position: left 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="12/5 Đường Top , Thành phố Thủ Đức">
+                                        <input type="text" name="address" size="30" style="background-image: url(/images/address.png); background-size:35px 20px; background-position: left 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="<?php echo $customer['address']?>">
                                     </div>
 
                                     <div class="col info">
                                         <label for="password">Password</label> <br>
-                                        <input type="password" name="password" size="30" maxlength="20" required style="background-image: url(/images/pass.png); background-size:25px 25px; background-position: left center 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="avangnuyen03"> <br> <br>
+                                        <input type="password" name="password" size="30" maxlength="20" required style="background-image: url(/images/pass.png); background-size:25px 25px; background-position: left center 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="<?php echo $customer['password']?>"> <br> <br>
                                         <label for="email">Email</label> <br>
-                                        <input type="email" name="email" size="30" maxlength="50" required style="background-image: url(/images/email.png); background-size:20px 25px; background-position: left center 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="nguyenvana303@gmail.com"> <br> <br>
+                                        <input type="email" name="email" size="30" maxlength="50" required style="background-image: url(/images/email.png); background-size:20px 25px; background-position: left center 5px; background-repeat: no-repeat;padding-left:40px" class="border border-dark rounded-pill" value="<?php echo $customer['email']?>"> <br> <br>
                                         <label for="DOB">Ngày sinh</label> <br>
-                                        <input type="date" name="DOB" style="width: 317px; height:28px" class="border border-dark rounded-pill"> <br> <br>
+                                        <input type="date" name="DOB" style="width: 317px; height:28px" class="border border-dark rounded-pill" value="<?php echo $customer['DOB']?>"> <br> <br>
                                         <label for="gender">Giới tính</label> <br>
-                                        <select name="gender" style="width: 317px; height:28px" class="border border-dark rounded-pill" value="nguyenvana03">
+                                        <select name="gender" style="width: 317px; height:28px" class="border border-dark rounded-pill" value="<?php echo $customer['gender']?>">
                                             <option value="male">Male</option>
                                             <option value="female">Female</option>
                                             <option value="female">Other</option>
@@ -76,18 +86,20 @@
                                     </div>
                                 </div>
                                 <br>
+                       
                                 <div class="row">
                                     <div class="col text-center">
-                                <input type="submit" name="submit" value="Sửa" style="margin-right:62px ;border-radius:20px;width:100px;border:solid gray 1px">
+                                <input type="submit" name="submit" value="Sửa" style=" transform: translateX(-30%);border-radius:20px;width:100px;border:solid gray 1px">
                                     </div>   
                             </div>
                             </form>
 
                         </div>
                     </div>
+                  
                 </div>
             </div>
         </div>
-  </x-homeUser>
+  </x-homeCustomer>
 </body>
 </html>
