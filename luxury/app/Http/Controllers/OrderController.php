@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\OrderDetail;
+use App\Models\Order;
 
-class OrderDetailController extends Controller
+class OrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class OrderDetailController extends Controller
      */
     public function index()
     {
-        $orderDetails = OrderDetail::all();
-        return view('cart.index', ['orderDetails' => $orderDetails]);
+        $orders = Order::all();
+        return view('cart.index', ['orders' => $orders]);
     }
 
     /**

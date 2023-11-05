@@ -49,31 +49,80 @@ class DatabaseSeeder extends Seeder
             'product_size' => "13",
         ]);
 
-        DB::table('customers')->insert([
-            'name' => "user",
-            'pass' => "123456",
+        // DB::table('customers')->insert([
+        //     'name' => "user",
+        //     'pass' => "123456",
+        // ]);
+
+        DB::table('orders')->insert([
+            'order_date' => "2023-11-05",
+            'order_status' => 1,
+            'order_total' => 40000,
+        ]);
+        DB::table('orders')->insert([
+            'order_date' => "2023-11-05",
+            'order_status' => 2,
+            'order_total' => 60000,
+        ]);
+        DB::table('orders')->insert([
+            'order_date' => "2023-11-05",
+            'order_status' => 3,
+            'order_total' => 80000,
         ]);
 
         DB::table('order_details')->insert([
             'product_id' => 1,
-            'customer_id' => 1,
+            'order_id' => 1,
             'quality' => 10,
             'unit_price' => 40000,
             'sub_total' => 40000,
         ]);
         DB::table('order_details')->insert([
             'product_id' => 2,
-            'customer_id' => 1,
+            'order_id' => 1,
             'quality' => 30,
             'unit_price' => 60000,
             'sub_total' => 60000,
         ]);
         DB::table('order_details')->insert([
             'product_id' => 3,
-            'customer_id' => 1,
+            'order_id' => 1,
             'quality' => 20,
             'unit_price' => 80000,
             'sub_total' => 80000,
+        ]);
+
+        DB::table('categories')->insert([
+            'category_name' => 'Phone',
+
+        ]);
+        DB::table('categories')->insert([
+            'category_name' => 'Tablet',
+
+        ]);
+        DB::table('categories')->insert([
+            'category_name' => 'PC',
+
+        ]);
+        DB::table('category_product')->insert([
+            'category_id' => '1',
+            'product_id' =>  '1'
+
+        ]);
+        DB::table('category_product')->insert([
+            'category_id' => '1',
+            'product_id' =>  '2'
+
+        ]);
+        DB::table('category_product')->insert([
+            'category_id' => '2',
+            'product_id' =>  '2'
+
+        ]);
+        DB::table('category_product')->insert([
+            'category_id' => '1',
+            'product_id' =>  '3'
+
         ]);
     }
 }
