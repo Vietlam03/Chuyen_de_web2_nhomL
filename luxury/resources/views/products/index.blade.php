@@ -13,6 +13,12 @@
                 <a href="#" style="color: white; text-decoration: none;">{{$category->test}}</a>
             @endforeach
             </span>
+            <span class="badge bg-primary">Danh mục:
+            @foreach ($product->orders as $order)
+                <a href="#" style="color: white; text-decoration: none;">{{$order->date}}</a>
+                <a href="#" style="color: white; text-decoration: none;">{{$order->total}}</a>
+            @endforeach
+            </span>
             </div>
             @endforeach
         </div>

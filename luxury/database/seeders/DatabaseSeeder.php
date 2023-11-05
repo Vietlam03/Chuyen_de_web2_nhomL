@@ -78,6 +78,23 @@ class DatabaseSeeder extends Seeder
             'image' => 'dell.jpg',
             'quantity' => 2
         ]);
+
+        DB::table('orders')->insert([
+            'date' => '2023-11-5',
+            'status' => '0',
+            'total' => '40000',
+        ]);
+        DB::table('orders')->insert([
+            'date' => '2023-11-5',
+            'status' => '0',
+            'total' => '60000',
+        ]);
+        DB::table('orders')->insert([
+            'date' => '2023-11-5',
+            'status' => '0',
+            'total' => '80000',
+        ]);
+
         DB::table('categories')->insert([
             'name' => 'Phone',
 
@@ -110,6 +127,27 @@ class DatabaseSeeder extends Seeder
             'category_id' => '1',
             'product_id' =>  '3',
             'test' => '1'
+        ]);
+
+        DB::table('order_product')->insert([
+            'order_id' => '1',
+            'product_id' =>  '1',
+
+        ]);
+        DB::table('order_product')->insert([
+            'order_id' => '1',
+            'product_id' =>  '2',
+
+        ]);
+        DB::table('order_product')->insert([
+            'order_id' => '2',
+            'product_id' =>  '2',
+
+        ]);
+        DB::table('order_product')->insert([
+            'order_id' => '1',
+            'product_id' =>  '3',
+
         ]);
     }
 }
