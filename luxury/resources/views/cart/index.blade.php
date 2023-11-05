@@ -4,9 +4,6 @@
             <tr id="{{ $order->product_id }}">
                 <th id="product-name">
                     <button id="remove-product-id" class="remove">x</button>
-                    {{-- @foreach ($orderDetail->products as $product)
-                        <div class="">{{ $product->product_name }}</div> 
-                    @endforeach --}}
                     <img src="{{ URL('image/nhan-kim-cuong-nam-18k-vnm2022072751-768x768.jpg') }}" alt="image san pham" class="cart-img">
                     <a href="#" class="text-decoration-none cart-detail-name">ten sp</a>
                 </th>

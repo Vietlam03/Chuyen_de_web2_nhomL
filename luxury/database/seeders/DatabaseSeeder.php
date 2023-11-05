@@ -70,21 +70,21 @@ class DatabaseSeeder extends Seeder
             'order_total' => 80000,
         ]);
 
-        DB::table('order_details')->insert([
+        DB::table('order_product')->insert([
             'product_id' => 1,
             'order_id' => 1,
             'quality' => 10,
             'unit_price' => 40000,
             'sub_total' => 40000,
         ]);
-        DB::table('order_details')->insert([
+        DB::table('order_product')->insert([
             'product_id' => 2,
             'order_id' => 1,
             'quality' => 30,
             'unit_price' => 60000,
             'sub_total' => 60000,
         ]);
-        DB::table('order_details')->insert([
+        DB::table('order_product')->insert([
             'product_id' => 3,
             'order_id' => 1,
             'quality' => 20,
