@@ -18,19 +18,5 @@ use App\Http\Controllers\CategoryController;
 */
 
 Route::get('/', function () {
-    return view('home');
-    // return env('DB_DATABASE');
+    return view('welcome');
 });
-// Route::get('/next', function () {
-//     // return view('welcome');
-//     return redirect('/');
-// });
-// Route::get('/cart', function () {
-//     return view('cart');
-// });
-
-// Route::get('products', function () {
-//    return view('products/index'); 
-// });
-
-Route::resource('products', ProductController::class);
