@@ -19,6 +19,12 @@
                 <a href="#" style="color: white; text-decoration: none;">{{$order->total}}</a>
             @endforeach
             </span>
+            <span class="badge bg-primary">Danh mục:
+            <?php $cate_pros = DB::table('category_product')->get(); ?>
+            @foreach ($cate_pros as $cate_pro)
+                <a href="#" style="color: white; text-decoration: none;">{{$cate_pro->test}}</a>
+            @endforeach
+            </span>
             </div>
             @endforeach
         </div>
