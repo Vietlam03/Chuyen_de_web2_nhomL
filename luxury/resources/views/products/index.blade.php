@@ -7,11 +7,12 @@
                 <div class="price">Giá: {{ $product->price }}</div>
                 <div class="quantity">Số lượng: {{ $product->quantity }}</div>
 
-            {{-- <span class="badge bg-primary">Danh mục:
+            <span class="badge bg-primary">Danh mục:
             @foreach ($product->categories as $category)
-                <a href="{{route('categories.show',$category->id)}}" style="color: white; text-decoration: none;">{{$category->name}}</a>
+                <a href="#" style="color: white; text-decoration: none;">{{$category->name}}</a>
+                <a href="#" style="color: white; text-decoration: none;">{{$category->test}}</a>
             @endforeach
-            </span> --}}
+            </span>
             </div>
             @endforeach
         </div>

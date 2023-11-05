@@ -90,5 +90,26 @@ class DatabaseSeeder extends Seeder
             'name' => 'PC',
 
         ]);
+
+        DB::table('category_product')->insert([
+            'category_id' => '1',
+            'product_id' =>  '1',
+            'test' => '1'
+        ]);
+        DB::table('category_product')->insert([
+            'category_id' => '1',
+            'product_id' =>  '2',
+            'test' => '1'
+        ]);
+        DB::table('category_product')->insert([
+            'category_id' => '2',
+            'product_id' =>  '2',
+            'test' => '1'
+        ]);
+        DB::table('category_product')->insert([
+            'category_id' => '1',
+            'product_id' =>  '3',
+            'test' => '1'
+        ]);
     }
 }
