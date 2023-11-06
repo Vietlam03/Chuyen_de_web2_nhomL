@@ -6,17 +6,17 @@
                     <ul class="menu1" style="padding-top:10px">
                         <li>
                             <a href="">
-                                <img src="images/address.png" style="cursor: pointer;width: 24px;">
+                                <img src="/../images/address.png" style="cursor: pointer;width: 24px;">
                             </a>
                         </li>
                         <li>
                             <a href="" style="padding-left:4px">
-                                <img src="images/zalo.png" style="width: 24px; height: 24px; ">
+                                <img src="/../images/zalo.png" style="width: 24px; height: 24px; ">
                             </a>
                         </li>
                         <li>
                             <a href="" style="text-decoration: none; color:black;padding-left:4px">
-                                <img src="images/phone.png" style="cursor: pointer;width: 24px; ">
+                                <img src="/../images/phone.png" style="cursor: pointer;width: 24px; ">
                                 <span style="padding-left: 10px;margin-top:20px">1900 232 354 </span>
                             </a>
                         </li>
@@ -32,7 +32,7 @@
                         </li>
                         <li>
                             <a href="">
-                                <img src="images/GioHang.png" style="cursor: pointer;width: 24px;">
+                                <img src="/../images/GioHang.png" style="cursor: pointer;width: 24px;">
                             </a>
                         </li>
                     </ul>
