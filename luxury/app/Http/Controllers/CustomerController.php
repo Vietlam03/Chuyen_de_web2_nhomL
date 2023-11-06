@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Customer;
+use App\Models\Order;
 
 class CustomerController extends Controller
 {
@@ -13,7 +15,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        //
+        $customers = Customer::all();
+        return view('customer.index', ['customers' => $customers]);
     }
 
     /**
@@ -43,9 +46,10 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Order $order)
     {
-       //
+        $customers = $order->customers()->get();
+        return view('customer.index', ['order' => $order,'customers' => $customers]);
     }
 
     /**

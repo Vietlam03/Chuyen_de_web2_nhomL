@@ -7,24 +7,7 @@
         <div class="row">
             {{-- Cart detail --}}
             <div class="col-md-7 border border-2 border-start-0 border-top-0 border-bottom-0">
-                <div class="loader d-none">Loadding...</div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Sản phẩm</th>
-                            <th>Giá</th>
-                            <th>Số lượng</th>
-                            <th>Tạm tính</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{ $slot }}
-                    </tbody>
-                </table>
-                <div class="border-bottom-0 border-white">
-                    <a class="btn btn-view">← TIẾP TỤC XEM SẢN PHẨM</a>
-                    <a class="btn btn-update">CẬP NHẬT GIỎ HÀNG</a>
-                </div>
+                {{ $slot }}
             </div>
             {{-- Payment --}}
             <div class="col-md-5">

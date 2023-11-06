@@ -49,25 +49,32 @@ class DatabaseSeeder extends Seeder
             'product_size' => "13",
         ]);
 
-        // DB::table('customers')->insert([
-        //     'name' => "user",
-        //     'pass' => "123456",
-        // ]);
+        DB::table('customers')->insert([
+            'name' => "user1",
+            'pass' => "123456",
+        ]);
+        DB::table('customers')->insert([
+            'name' => "user2",
+            'pass' => "123456",
+        ]);
 
         DB::table('orders')->insert([
             'order_date' => "2023-11-05",
             'order_status' => 1,
             'order_total' => 40000,
+            'customer_id' => 1,
         ]);
         DB::table('orders')->insert([
             'order_date' => "2023-11-05",
-            'order_status' => 2,
+            'order_status' => 0,
             'order_total' => 60000,
+            'customer_id' => 1,
         ]);
         DB::table('orders')->insert([
             'order_date' => "2023-11-05",
-            'order_status' => 3,
+            'order_status' => 0,
             'order_total' => 80000,
+            'customer_id' => 2,
         ]);
 
         DB::table('order_product')->insert([
@@ -87,6 +94,20 @@ class DatabaseSeeder extends Seeder
         DB::table('order_product')->insert([
             'product_id' => 3,
             'order_id' => 1,
+            'quality' => 20,
+            'unit_price' => 80000,
+            'sub_total' => 80000,
+        ]);
+        DB::table('order_product')->insert([
+            'product_id' => 2,
+            'order_id' => 2,
+            'quality' => 30,
+            'unit_price' => 60000,
+            'sub_total' => 60000,
+        ]);
+        DB::table('order_product')->insert([
+            'product_id' => 1,
+            'order_id' => 2,
             'quality' => 20,
             'unit_price' => 80000,
             'sub_total' => 80000,

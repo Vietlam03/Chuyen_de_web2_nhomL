@@ -6,10 +6,12 @@ use App\Models\Product;
 // use App\Models\Comment;
 use App\Models\OrderDetail;
 use App\Models\Order;
+use App\Models\Customer;
 use App\Http\Controllers\ProductController;
 // use App\Http\Controllers\CategoryController;
 // use App\Http\Controllers\CommentController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +36,5 @@ Route::get('/trangchu', function () {
 });
 
 Route::resource('products', ProductController::class);
-Route::resource('cart', OrderController::class);
+Route::resource('order', OrderController::class);
+Route::resource('customer', CustomerController::class);

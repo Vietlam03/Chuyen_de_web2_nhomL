@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
+use App\Models\Customer;
 
 class OrderController extends Controller
 {
@@ -15,7 +16,7 @@ class OrderController extends Controller
     public function index()
     {
         $orders = Order::all();
-        return view('cart.index', ['orders' => $orders]);
+        return view('order.index', ['orders' => $orders]);
     }
 
     /**
@@ -45,9 +46,9 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Order $order)
     {
-        //
+        // return view('customer.show', ['customer' => $customer]);
     }
 
     /**
@@ -70,7 +71,7 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return redirect()->route('products.index');
     }
 
     /**

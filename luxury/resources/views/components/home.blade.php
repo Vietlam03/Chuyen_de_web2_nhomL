@@ -36,7 +36,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a href="{{ route('order.index') }}">
                                 <img src="images/GioHang.png" style="cursor: pointer;width: 24px;">
                             </a>
                         </li>
@@ -51,7 +51,7 @@
                 <div class="col-12">
                     <ul>
                         <li>
-                            <a href="" style="text-decoration: none; color:black">
+                            <a href="{{ url('/trangchu') }}" style="text-decoration: none; color:black">
                                 <img src="images/logo.png" style="cursor: pointer;width: 70px;height:70px">
                             </a>
                         </li>
