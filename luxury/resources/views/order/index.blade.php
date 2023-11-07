@@ -16,11 +16,16 @@
                     @if ($order->customer_id == 1)
                         @if ($order->order_status == 0)
                             @foreach ($order->products as $product)
-                            <tr id="{{ $product->id }}">
+                            <tr class="products" id="{{ $product->id }}">
                                 <th id="product-name">
-                                    <button id="remove-product-id" class="remove">x</button>
+                                    <form action="{{ url('/order/'.$order->id)}}" method="POST" class="d-inline-block">
+                                        @csrf
+                                        @method('delete')
+                                        <input type="hidden" value="{{ $product->id }}" id="product_id" name="product_id">
+                                        <button onclick="return confirm('Bạn có muốn xóa hay không?')" type="submit" id="remove-product-id" class="remove">x</button>
+                                    </form>
                                     <img src="{{ URL('image/nhan-kim-cuong-nam-18k-vnm2022072751-768x768.jpg') }}" alt="image san pham" class="cart-img">
-                                    <a href="#" class="text-decoration-none cart-detail-name">{{ $product->product_name }}</a>
+                                    <a href="{{ route('products.show', $product->id) }}" class="text-decoration-none cart-detail-name">{{ $product->product_name }}</a>
                                 </th>
                                 <th id="product-price" style="line-height: 96px; ">
                                     <span class="price">{{ $product->product_price }}</span> ₫
@@ -57,7 +62,7 @@
         </table>
         <div class="border-bottom-0 border-white">
             <a href="{{ url('trangchu') }}" class="btn btn-view">← TIẾP TỤC XEM SẢN PHẨM</a>
-            <a href="{{ route('order.update', $order->id) }}" class="btn btn-update">CẬP NHẬT GIỎ HÀNG</a>
+            <a href="#" class="btn btn-update">CẬP NHẬT GIỎ HÀNG</a>
         </div>
         
     </x-cart>

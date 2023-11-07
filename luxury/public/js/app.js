@@ -1,23 +1,39 @@
 //Input number
-const plus = document.querySelector(".plus");
-const minus = document.querySelector(".minus");
-const num = document.querySelector(".num");
+const plus = document.querySelectorAll(".plus");
+const minus = document.querySelectorAll(".minus");
+const num = document.querySelectorAll(".num");
 
-let a = parseInt(num.textContent);
+for (let i = 1; i <= plus.length; i++) {
+  const element = plus[i - 1];
+  element.addEventListener("click", () => {
+    Num(i, "plus");
+  });
+}
+for (let i = 1; i <= minus.length; i++) {
+  const element = minus[i - 1];
+  element.addEventListener("click", () => {
+    Num(i, "minus");
+  });
+}
 
-plus.addEventListener("click", () => {
-  a++;
-  a = (a < 10) ? + a : a;
-  num.innerText = a;
-});
+function Num(number, fun) {
+  for (let i = 0; i < num.length; i++) {
+    let a = parseInt(num[i].textContent);
 
-minus.addEventListener("click", () => {
-  if (a > 0) {
-    a--;
-    a = (a < 10) ? + a : a;
-    num.innerText = a;
+    if (fun == "plus" && i + 1 == number) {
+      a++;
+      a = (a < 10) ? + a : a;
+      num[number - 1].innerText = a;
+    }
+    else if (fun == "minus" && i + 1 == number) {
+      if (a > 0) {
+        a--;
+        a = (a < 10) ? + a : a;
+        num[i].innerText = a;
+      }
+    }
   }
-});
+}
 
 // Cập nhật giỏ hàng
 const price = document.querySelector('.price').textContent;
@@ -55,11 +71,3 @@ btnUpdate.addEventListener('click', function () {
     element.innerText = update;
   });
 });
-
-// Xóa sản phẩm ra khỏi giỏ hàng
-const remove = document.querySelector('#remove-product-id');
-const product_id = document.querySelector('#product-id');
-
-remove.addEventListener('click', function () {
-  product_id.remove();
-})

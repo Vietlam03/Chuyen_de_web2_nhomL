@@ -80,8 +80,10 @@ class OrderController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request, Order $order)
     {
-        //
+        $order = Order::find($order->id);
+        $order->Products()->where('product_id', $request->product_id)->delete();
+        return redirect()->back();
     }
 }

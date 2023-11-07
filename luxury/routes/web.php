@@ -36,5 +36,7 @@ Route::get('/trangchu', function () {
 });
 
 Route::resource('products', ProductController::class);
+Route::delete('/products/delete/{$product}','ProductController@delete');
 Route::resource('order', OrderController::class);
+Route::delete('/order/delete/{$order}','OrderController@delete');
 Route::resource('customer', CustomerController::class);
