@@ -135,7 +135,7 @@
                             <img src="image/youtube.png" alt="" style="padding-left: 10px;padding-bottom:15px;">
                         </a>
                         <a href="" style="text-decoration:none;">
-                            <img src="{{asset('images/instagram.png')}}" alt="" style="padding-left: 10px;padding-bottom:15px;">
+                            <img src="image/instagram.png" alt="" style="padding-left: 10px;padding-bottom:15px;">
                         </a>
                     </li>
                 </div>
