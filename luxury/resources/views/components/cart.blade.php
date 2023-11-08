@@ -19,7 +19,7 @@
                     <tr>
                         <td>Tạm tính</td>
                         <th class="text-end">
-                            <span class="sub-total">49.617.000</span> ₫
+                            <span class="sub-total-pay">0</span> ₫
                         </th>
                     </tr>
                     <tr>
@@ -32,7 +32,7 @@
                     <tr class="border-3 border-start-0 border-end-0 border-top-0">
                         <td>Tổng</td>
                         <th class="text-end">
-                            <span class="sub-total">49.617.000</span> ₫
+                            <span class="sub-total-pay">0</span> ₫
                         </th>
                     </tr>
                     <tr class="border-3 border-start-0 border-end-0 border-top-0">

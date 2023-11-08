@@ -1,3 +1,10 @@
+<?php 
+session_start(); 
+$id = '';
+if(!empty($_SESSION['id'])) {
+    $id = $_SESSION['id'];
+}
+?>
 <x-home>
     <x-cart>
         <?php $orderDetails = DB::table('order_product')->get() ?>
@@ -13,7 +20,7 @@
             </thead>
             <tbody>
                 @foreach ($orders as $order)
-                    @if ($order->customer_id == 1)
+                    @if ($order->customer_id == $id)
                         @if ($order->order_status == 0)
                             @foreach ($order->products as $product)
                             <tr class="products" id="{{ $product->id }}">

@@ -36,38 +36,39 @@ function Num(number, fun) {
 }
 
 // Cập nhật giỏ hàng
-const price = document.querySelector('.price').textContent;
 const subTotal = document.querySelectorAll('.sub-total');
+const subTotalPay = document.querySelectorAll('.sub-total-pay');
 const btnUpdate = document.querySelector('.btn-update');
 
 btnUpdate.addEventListener('click', function () {
-  // cắt chuỗi giá sản phẩm
-  const array = price.split(".");
-  let total = "";
-  // nối chuỗi giá sản phẩm và đổi thành số
-  array.forEach(element => {
-    total += element;
-  });
-  // tính ra giá mới sau khi cập nhật số lượng
-  const newprice = parseInt(total) * a;
+  let total = 0;
+  let newprice = [];
+  for (let i = 0; i < subTotal.length; i++) {
+    newprice[i] = subTotal[i].textContent;
+    total += parseInt(newprice[i]);
+  }
+
+  subTotalPay[0].innerHTML = param(total);
+  subTotalPay[1].innerHTML = param(total);
+});
+
+function param(total) {
   // biến giá mới từ số thành chuỗi
-  total = newprice + "";
+  newtotal = total + "";
   // thêm dấu '.' vào sau chuỗi để hiển thị
   let update = "";
   let count = 1;
-  for (let i = total.length; i >= 1; i--) {
+  for (let i = newtotal.length; i >= 1; i--) {
     if (count == 3 && i != 1) {
-      update += total[i - 1] + '.';
+      update += newtotal[i - 1] + '.';
       count = 1;
     }
     else {
-      update += total[i - 1];
+      update += newtotal[i - 1];
       count++
     }
   }
   update = update.split('').reverse().join('');
-  // cập nhật giá mới và hiển thị lên giao diện
-  subTotal.forEach(element => {
-    element.innerText = update;
-  });
-});
+
+  return update;
+}
