@@ -20,7 +20,7 @@ if(!empty($_SESSION['id'])) {
             </thead>
             <tbody>
                 @foreach ($orders as $order)
-                    @if ($order->customer_id == $id)
+                    @if ($order->customer_id == 1)
                         @if ($order->order_status == 0)
                             @foreach ($order->products as $product)
                             <tr class="products" id="{{ $product->id }}">
@@ -32,10 +32,10 @@ if(!empty($_SESSION['id'])) {
                                         <button onclick="return confirm('Bạn có muốn xóa hay không?')" type="submit" id="remove-product-id" class="remove">x</button>
                                     </form>
                                     <img src="{{ URL('image/nhan-kim-cuong-nam-18k-vnm2022072751-768x768.jpg') }}" alt="image san pham" class="cart-img">
-                                    <a href="{{ route('products.show', $product->id) }}" class="text-decoration-none cart-detail-name">{{ $product->product_name }}</a>
+                                    <a href="{{ route('products.show', $product->id) }}" class="text-decoration-none cart-detail-name">{{ $product->name }}</a>
                                 </th>
                                 <th id="product-price" style="line-height: 96px; ">
-                                    <span class="price">{{ $product->product_price }}</span> ₫
+                                    <span class="price">{{ $product->price }}</span> ₫
                                 </th>
                                 <th id="product-quality">
                                     <div class="quality">
@@ -54,7 +54,7 @@ if(!empty($_SESSION['id'])) {
                                     @foreach ($orderDetails as $orderdetail)
                                         @if ($orderdetail->product_id == $product->id && $orderdetail->order_id == $order->id)
                                             <?php
-                                                $subtotal = $orderdetail->quality * $product->product_price
+                                                $subtotal = $orderdetail->quality * $product->price
                                             ?>
                                             <span class="sub-total">{{ $subtotal }}</span> ₫
                                         @endif

@@ -16,11 +16,7 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             // $table->integerIncrements('category_id');
             $table->id();
-<<<<<<< HEAD
             $table->string('name');
-=======
-            $table->string('category_name');
->>>>>>> huy/cart
             $table->timestamps();
         });
     }

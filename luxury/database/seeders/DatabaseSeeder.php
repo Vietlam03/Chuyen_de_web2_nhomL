@@ -27,37 +27,28 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminSeeder::class);
 
         DB::table('products')->insert([
-            'product_name' => "SP1",
-            'product_image' => "sp1.png",
-            'product_price' => "10000",
-            'product_description' => "sp1 là ...",
-            'product_material' => "vàng",
-            'product_size' => "13",
+            'name' => "SP1",
+            'image' => "sp1.png",
+            'price' => "10000",
+            'description' => "sp1 là ...",
+            'material' => "vàng",
+            'size' => "13",
         ]);
         DB::table('products')->insert([
-            'product_name' => "sp2",
-            'product_image' => "sp2.png",
-            'product_price' => "10000",
-            'product_description' => "sp2 là ...",
-            'product_material' => "vàng",
-            'product_size' => "13",
+            'name' => "sp2",
+            'image' => "sp2.png",
+            'price' => "10000",
+            'description' => "sp2 là ...",
+            'material' => "vàng",
+            'size' => "13",
         ]);
         DB::table('products')->insert([
-            'product_name' => "sp3",
-            'product_image' => "sp3.png",
-            'product_price' => "10000",
-            'product_description' => "sp3 là ...",
-            'product_material' => "vàng",
-            'product_size' => "13",
-        ]);
-
-        DB::table('customers')->insert([
-            'name' => "user1",
-            'pass' => "123456",
-        ]);
-        DB::table('customers')->insert([
-            'name' => "user2",
-            'pass' => "123456",
+            'name' => "sp3",
+            'image' => "sp3.png",
+            'price' => "10000",
+            'description' => "sp3 là ...",
+            'material' => "vàng",
+            'size' => "13",
         ]);
 
         DB::table('orders')->insert([
@@ -113,39 +104,6 @@ class DatabaseSeeder extends Seeder
             'quality' => 20,
             'unit_price' => 80000,
             'sub_total' => 80000,
-        ]);
-
-        DB::table('categories')->insert([
-            'category_name' => 'Phone',
-
-        ]);
-        DB::table('categories')->insert([
-            'category_name' => 'Tablet',
-
-        ]);
-        DB::table('categories')->insert([
-            'category_name' => 'PC',
-
-        ]);
-        DB::table('category_product')->insert([
-            'category_id' => '1',
-            'product_id' =>  '1'
-
-        ]);
-        DB::table('category_product')->insert([
-            'category_id' => '1',
-            'product_id' =>  '2'
-
-        ]);
-        DB::table('category_product')->insert([
-            'category_id' => '2',
-            'product_id' =>  '2'
-
-        ]);
-        DB::table('category_product')->insert([
-            'category_id' => '1',
-            'product_id' =>  '3'
-
         ]);
     }
 }
