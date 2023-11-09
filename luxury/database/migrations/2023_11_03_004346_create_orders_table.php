@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
-            // $table->integerIncrements('category_id');
+        Schema::create('orders', function (Blueprint $table) {
+            // $table->integerIncrements('order_id');
             $table->id();
-<<<<<<< HEAD
-            $table->string('name');
-=======
-            $table->string('category_name');
->>>>>>> huy/cart
+            $table->integer('customer_id');
+            // $table->primary('customer_id');
+            $table->date('order_date');
+            $table->tinyInteger('order_status');
+            $table->double('order_total');
             $table->timestamps();
         });
     }
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('orders');
     }
 };

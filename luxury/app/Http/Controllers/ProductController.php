@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
-use App\Models\product;
 use Illuminate\Http\Request;
+use App\Models\Product;
+use App\Models\Order;
 
 class ProductController extends Controller
 {
@@ -76,9 +77,13 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Product $product)
     {
-        //
+        // return view('products.show', [
+        //     'products' => Product::findOrFail($id)
+        // ]);
+
+        return view('products.show', ['product' => $product]);
     }
 
     /**
@@ -110,8 +115,19 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        // $product = Product::find($product->id);
+        // // $product->categories()->detach();
+        // // $product->delete();
+
+        // // if ($order == 1) {
+        // //     # code...
+        // // }
+        // echo $product->orders()->get();
+        // echo '123';
+        // // $product->orders()->detach();
+
+        // // return redirect()->back();
     }
 }

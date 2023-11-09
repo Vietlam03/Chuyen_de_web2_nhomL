@@ -7,45 +7,7 @@
         <div class="row">
             {{-- Cart detail --}}
             <div class="col-md-7 border border-2 border-start-0 border-top-0 border-bottom-0">
-                <div class="loader d-none">Loadding...</div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Sản phẩm</th>
-                            <th>Giá</th>
-                            <th>Số lượng</th>
-                            <th>Tạm tính</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="product-id">
-                            <th id="product-name">
-                                <button id="remove-product-id" class="remove">x</button>
-                                <img src="{{ URL('image/nhan-kim-cuong-nam-18k-vnm2022072751-768x768.jpg') }}" alt="image san pham" class="cart-img">
-                                <a href="#" class="text-decoration-none cart-detail-name">ten sp</a>
-                            </th>
-                            <th id="product-price" style="line-height: 96px; ">
-                                <span class="price">49.617.000</span> ₫
-                            </th>
-                            <th id="product-quality">
-                                <div class="quality">
-                                    <div class="wrapper">
-                                        <span class="minus">-</span>
-                                        <span class="num">1</span>
-                                        <span class="plus">+</span>
-                                    </div>
-                                </div>
-                            </th>
-                            <th id="product-subtotal" style="line-height: 96px; ">
-                                <span class="sub-total">49.617.000</span> ₫
-                            </th>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="border-bottom-0 border-white">
-                    <a class="btn btn-view">← TIẾP TỤC XEM SẢN PHẨM</a>
-                    <a class="btn btn-update">CẬP NHẬT GIỎ HÀNG</a>
-                </div>
+                {{ $slot }}
             </div>
             {{-- Payment --}}
             <div class="col-md-5">
@@ -57,7 +19,7 @@
                     <tr>
                         <td>Tạm tính</td>
                         <th class="text-end">
-                            <span class="sub-total">49.617.000</span> ₫
+                            <span class="sub-total-pay">0</span> ₫
                         </th>
                     </tr>
                     <tr>
@@ -70,7 +32,7 @@
                     <tr class="border-3 border-start-0 border-end-0 border-top-0">
                         <td>Tổng</td>
                         <th class="text-end">
-                            <span class="sub-total">49.617.000</span> ₫
+                            <span class="sub-total-pay">0</span> ₫
                         </th>
                     </tr>
                     <tr class="border-3 border-start-0 border-end-0 border-top-0">
@@ -83,7 +45,7 @@
                         </td>
                     </tr>
                 </table>
-                <input type="text" class="form-control border-3" placeholder="Mã ưu đãi">
+                <input type="text" class="form-control border-3" placeholder="Mã ưu đãi" maxlength="6">
                 <button type="submit" class="btn text-center btn-promotion">Áp dụng</button>
             </div>
         </div>
