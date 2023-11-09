@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,14 +31,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-
-// //admin laravel --version 8
-// route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
-//     Route::namespace('Auth')->group(function () {
-//         // login route
-//         Route::get('login', 'AuthenticatedSessionController@create')->name('login');
-//     });
-// });
 //Admin routing laravel --version 9
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::namespace('Auth')->group(function () {
@@ -47,3 +40,17 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     });
     Route::get('dashboard', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('dashboard');
 });
+
+Route::get('/create', function () {
+    return view('products.create');
+});
+
+Route::get('/index', function () {
+    return view('products.index');
+});
+
+Route::resource('categories', CategoryController::class);
+Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
+Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+
