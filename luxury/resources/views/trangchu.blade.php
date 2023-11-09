@@ -15,9 +15,7 @@ $_SESSION['id'] = 1;
 </head>
 <body>
 <x-home>
-    <div class="content">
-        
-    </div>
+   
 </x-home>
 </body>
 </html>

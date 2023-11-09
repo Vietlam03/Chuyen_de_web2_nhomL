@@ -6,6 +6,7 @@ use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Order;
+use Illuminate\Pagination\Paginator;
 
 class ProductController extends Controller
 {
@@ -16,10 +17,11 @@ class ProductController extends Controller
      */
     public function index()
     {
+        //Phan trang
+        $products = Product::paginate(3);
         $products = Product::all();
         return view('products.index', compact('products'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
