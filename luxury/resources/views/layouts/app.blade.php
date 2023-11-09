@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -33,7 +33,7 @@
             </main>
         </div>
     </body>
-</html>
+</html> --}}
 <html lang="en">
 
 <head>
@@ -57,14 +57,14 @@
                     <p>
                     <div>
                         <a id="toggler" class="visible-xs" href="#toggle">
-                            <img src="img/LogoAdmin.png" alt="">
+                            <img src="{{ url('img/LogoAdmin.png') }}" alt="">
                         </a>
                     </div>
                     <div class="logo"><a href="/">Luxury Administrator</a></div>
                     <div class="welcome">
                         <li class="WAdmin">Chào mừng <strong>admin</strong></li>
                         <li><a href=""><span>Thay đổi mật khẩu</span></a></li>
-                        <li><a href=""><img class="img-fluid" src="img/Thoat.png" alt=""><span>Thoát</span></a></li>
+                        <li><a href=""><img class="img-fluid" src="{{ url('img/Thoat.png') }}" alt=""><span>Thoát</span></a></li>
                     </div>
                     </p>
 

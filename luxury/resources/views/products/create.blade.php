@@ -19,9 +19,9 @@
                 <label for="material">Danh Mục</label>
                 <select class ="form-control" name="material">
                     <option value="">Chọn danh mục sản phẩm</option>
-                     @foreach ($catefories as $category)
+                     {{-- @foreach ($catefories as $category)
                     <option value="{{$category->category_id}}">{{ $category->category_name}}</option>
-                     @endforeach
+                     @endforeach --}}
                
                 </select>
             </div>
