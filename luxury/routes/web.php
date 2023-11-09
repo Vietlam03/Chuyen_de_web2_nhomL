@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+//man hinh trang chu
 Route::get('/', function () {
     return view('welcome');
 });
-
+// man hinh trang usser
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
