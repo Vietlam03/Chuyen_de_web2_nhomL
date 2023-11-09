@@ -52,18 +52,18 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('dashboard', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('dashboard');
 });
 
-Route::get('/create', function () {
-    return view('products.create');
+Route::get('admin/create', function () {
+    return view('admin.products.create');
 });
 
 Route::get('/index', function () {
-    return view('products.index');
+    return view('admin.products.index');
 });
 
 Route::resource('categories', CategoryController::class);
-Route::get('/products', [ProductController::class, 'index'])->name('products.index');
-Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
-Route::post('/products', [ProductController::class, 'store'])->name('products.store');
+Route::get('admin/products', [ProductController::class, 'index'])->name('products.index');
+Route::get('admin/products/create', [ProductController::class, 'create'])->name('products.create');
+Route::post('admin/products', [ProductController::class, 'store'])->name('products.store');
 
 Route::resource('customers', CustomerController::class);
 Route::get('/customers/{customer}/edit', [CustomerController::class, 'edit'])->name('customers.edit');

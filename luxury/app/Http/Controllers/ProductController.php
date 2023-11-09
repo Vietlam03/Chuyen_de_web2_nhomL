@@ -15,12 +15,21 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function pagination()
     {
         //Phan trang
         $products = Product::paginate(3);
-        $products = Product::all();
         return view('products.index', compact('products'));
+    }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $products = Product::all();
+        return view('admin.products.index', compact('products'));
     }
     /**
      * Show the form for creating a new resource.
@@ -31,7 +40,7 @@ class ProductController extends Controller
     {
        
     $categories = Category::all();
-    return view('products.index', compact('categories'));
+    return view('admin.products.index', compact('categories'));
     }
 
     /**
@@ -70,7 +79,7 @@ class ProductController extends Controller
 
         // Save the product to the database
         $product->save();
-        return redirect()->route('products.index')->with('success', 'Sản phẩm đã được thêm thành công!');
+        return redirect()->route('admin.products.index')->with('success', 'Sản phẩm đã được thêm thành công!');
     }
 
     /**
