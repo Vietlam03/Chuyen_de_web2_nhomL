@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/trangchu', function () {
     return view('trangchu');
 });
+
+//Hien thi danh sach san pham
+Route::resource('products', ProductController::class);
+// Route::resource('products',ProductController::class, 'index');

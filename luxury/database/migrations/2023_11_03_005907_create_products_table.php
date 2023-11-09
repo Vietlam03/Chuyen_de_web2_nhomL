@@ -19,7 +19,9 @@ return new class extends Migration
             $table->string('image');
             $table->decimal('price');
             $table->string('description');
-            $table->string
+            $table->string('material');
+            $table->double('size');
+            $table->timestamps();
             
         });
     }

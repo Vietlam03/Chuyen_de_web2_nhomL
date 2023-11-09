@@ -11,9 +11,7 @@
 </head>
 <body>
 <x-home>
-    <div class="content">
-        nooouij cdudsh
-    </div>
+   
 </x-home>
 </body>
 </html>
